@@ -14,6 +14,7 @@
 		8CCFD51C2CB49149000554CC /* MalqueSoundBoard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8CCFD51A2CB49149000554CC /* MalqueSoundBoard.xcdatamodeld */; };
 		8CCFD51E2CB49149000554CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CCFD51D2CB49149000554CC /* Assets.xcassets */; };
 		8CCFD5212CB49149000554CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCFD51F2CB49149000554CC /* LaunchScreen.storyboard */; };
+		8CCFD52D2CB498F8000554CC /* SoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCFD52C2CB498F8000554CC /* SoundViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8CCFD51D2CB49149000554CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CCFD5202CB49149000554CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CCFD5222CB49149000554CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CCFD52C2CB498F8000554CC /* SoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				8CCFD5132CB49149000554CC /* SceneDelegate.swift */,
 				8CCFD5152CB49149000554CC /* ViewController.swift */,
 				8CCFD5172CB49149000554CC /* Main.storyboard */,
+				8CCFD52C2CB498F8000554CC /* SoundViewController.swift */,
 				8CCFD51D2CB49149000554CC /* Assets.xcassets */,
 				8CCFD51F2CB49149000554CC /* LaunchScreen.storyboard */,
 				8CCFD5222CB49149000554CC /* Info.plist */,
@@ -145,6 +148,7 @@
 				8CCFD5122CB49149000554CC /* AppDelegate.swift in Sources */,
 				8CCFD5142CB49149000554CC /* SceneDelegate.swift in Sources */,
 				8CCFD51C2CB49149000554CC /* MalqueSoundBoard.xcdatamodeld in Sources */,
+				8CCFD52D2CB498F8000554CC /* SoundViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
