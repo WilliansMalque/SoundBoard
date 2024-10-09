@@ -15,21 +15,35 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = UITableViewCell()
         let grabacion = grabaciones[indexPath.row]
-        cell.textLabel?.text = grabacion.nombre
+                
+                // Mostrar el nombre y la duración en la celda
+        let duracionFormateada = formatearTiempo(grabacion.duracion) // Corrección aquí
+        cell.textLabel?.text = "\(grabacion.nombre ?? "Sin nombre") - \(duracionFormateada)"
+                
         return cell
+        }
+    
+    
+    func formatearTiempo(_ tiempo: TimeInterval) -> String {
+        let minutos = Int(tiempo) / 60
+        let segundos = Int(tiempo) % 60
+        return String(format: "%02d:%02d", minutos, segundos)
     }
+
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        do{
-            grabaciones = try
-            context.fetch(Grabacion.fetchRequest())
-            tablaGrabaciones.reloadData()
-        }catch{}
+            do {
+                grabaciones = try context.fetch(Grabacion.fetchRequest())
+                tablaGrabaciones.reloadData()
+            } catch {
+                print("Error al cargar grabaciones: \(error)")
+            }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -38,6 +52,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         do{
             reproducirAudio = try AVAudioPlayer(data: grabacion.audio! as Data)
             reproducirAudio?.play()
+            print("reproduciendo")
         }catch{}
         tablaGrabaciones.deselectRow(at: indexPath, animated: true)
     }

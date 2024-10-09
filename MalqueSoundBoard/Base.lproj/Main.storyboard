@@ -94,10 +94,21 @@
                                     <action selector="agregarTapped:" destination="8jb-r3-KNJ" eventType="touchUpInside" id="3rW-Nn-Qhy"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLb-lv-z5E">
+                                <rect key="frame" x="184" y="446.5" width="46" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="k14-Eg-f9I">
+                                <rect key="frame" x="146" y="507" width="118" height="31"/>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sno-NF-dIp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="KLb-lv-z5E" firstAttribute="top" secondItem="BIF-2W-p2U" secondAttribute="bottom" constant="40" id="3Gw-LN-IQA"/>
+                            <constraint firstItem="k14-Eg-f9I" firstAttribute="top" secondItem="KLb-lv-z5E" secondAttribute="bottom" constant="40" id="9dR-XZ-X0o"/>
                             <constraint firstItem="TUI-9Z-VhZ" firstAttribute="top" secondItem="h26-1a-CWJ" secondAttribute="bottom" constant="30" id="AU1-3N-fMu"/>
                             <constraint firstItem="sno-NF-dIp" firstAttribute="trailing" secondItem="TUI-9Z-VhZ" secondAttribute="trailing" constant="20" id="Dqr-4c-7LP"/>
                             <constraint firstItem="sno-NF-dIp" firstAttribute="trailing" secondItem="Vga-ie-fOx" secondAttribute="trailing" constant="20" id="ESa-LE-irv"/>
@@ -106,6 +117,8 @@
                             <constraint firstItem="TUI-9Z-VhZ" firstAttribute="leading" secondItem="sno-NF-dIp" secondAttribute="leading" constant="20" id="PCl-gt-vkf"/>
                             <constraint firstItem="TUI-9Z-VhZ" firstAttribute="centerX" secondItem="G2q-cO-ab7" secondAttribute="centerX" id="Pdv-eQ-kLJ"/>
                             <constraint firstItem="Vga-ie-fOx" firstAttribute="leading" secondItem="sno-NF-dIp" secondAttribute="leading" constant="20" id="QeH-q3-Pe3"/>
+                            <constraint firstItem="KLb-lv-z5E" firstAttribute="centerX" secondItem="G2q-cO-ab7" secondAttribute="centerX" id="TAy-br-5vq"/>
+                            <constraint firstItem="k14-Eg-f9I" firstAttribute="centerX" secondItem="G2q-cO-ab7" secondAttribute="centerX" id="Vb9-0K-nU0"/>
                             <constraint firstItem="h26-1a-CWJ" firstAttribute="top" secondItem="Kxg-xX-cd7" secondAttribute="bottom" constant="20" id="YFw-Ih-W0O"/>
                             <constraint firstItem="Vga-ie-fOx" firstAttribute="top" secondItem="TUI-9Z-VhZ" secondAttribute="bottom" constant="20" id="ZRR-6J-Y8D"/>
                             <constraint firstItem="BIF-2W-p2U" firstAttribute="centerX" secondItem="G2q-cO-ab7" secondAttribute="centerX" id="ZqD-7h-pld"/>
@@ -120,6 +133,8 @@
                         <outlet property="grabarButton" destination="Kxg-xX-cd7" id="daV-m3-bp1"/>
                         <outlet property="nombreTextField" destination="Vga-ie-fOx" id="ayW-gV-owl"/>
                         <outlet property="reproducirButton" destination="h26-1a-CWJ" id="wlF-Eh-0TS"/>
+                        <outlet property="tiempoGrabacionLabel" destination="KLb-lv-z5E" id="aQ0-un-iGh"/>
+                        <outlet property="volumeSlider" destination="k14-Eg-f9I" id="zul-db-qDZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQT-s1-cKW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
